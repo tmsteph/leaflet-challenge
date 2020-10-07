@@ -7,7 +7,7 @@ The USGS is responsible for providing scientific data about natural hazards, the
 
 ## Get the Data Set
 - The USGS provides earthquake data in a number of different formats, updated every 5 minutes
-- The 'All Earthquakes from the Past 7 Days' data set was selected from the [USGS GeoJSON Feed](https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php) page
+- The "All Earthquakes from the Past 7 Days" data set was selected from the [USGS GeoJSON Feed](https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php) page
 - The data was given in JSON format which was used to pull in the data for the visualization
 ## Import and Visualize the Data
 Create a map using Leaflet that plots all of the earthquakes from the data set based on their longitude and latitude.
