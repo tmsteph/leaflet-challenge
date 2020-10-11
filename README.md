@@ -1,4 +1,5 @@
 # Visualizing Data with Leaflet
+![Earthquake](https://www.sciencemag.org/sites/default/files/styles/article_main_large/public/images/sn-seismicH.jpg?itok=I-6a0Sri)
 ## Deployment Link
 https://jiuhe2020.github.io/leaflet-challenge/
 ## Challenge Instructions
