@@ -20,7 +20,7 @@ Create a map using Leaflet that plots all of the earthquakes from the data set b
 
 ## Level-2: More Data
 Plot a second data set on the map above to illustrate the relationship between tectonic plates and seismic activity.
-- Pull in [tectonic plates](https://github.com/fraxen/tectonicplates) data set
+- Pull in [Tectonic Plates](https://github.com/fraxen/tectonicplates) data set
 - Visualize it along side the original set of data
 - Add a number of base maps (Satellite Map, Grayscale Map, Outdoors Map and Dark Map) to choose from
 - Separate out the two different data sets (earthquakes and tectonic plates) into overlays that can be turned on and off independently
