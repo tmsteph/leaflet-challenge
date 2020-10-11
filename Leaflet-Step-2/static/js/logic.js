@@ -131,7 +131,7 @@ d3.json(earthquakesURL, function(earthquakeData) {
       var div = L.DomUtil.create("div", "info legend"),
       depth = [-10, 10, 30, 50, 70, 90];
       
-      div.innerHTML += "<h3>Magnitude</h3>"
+      div.innerHTML += "<h3>Depth</h3>"
   
       for (var i =0; i < depth.length; i++) {
         div.innerHTML += 
