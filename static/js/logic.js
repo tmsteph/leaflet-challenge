@@ -70,22 +70,22 @@ L.control.layers(baseMaps, overlayMaps, {
 }).addTo(myMap);
 
 d3.json(earthquakesURL, function(earthquakeData) {
-
+  // Determine the marker size by magnitude
   function markerSize(magnitude) {
     return magnitude * 4;
   };
-  
-  function chooseColor(magnitude) {
+  // Determine the marker color by depth
+  function chooseColor(depth) {
     switch(true) {
-      case magnitude > 5:
+      case depth > 90:
         return "red";
-      case magnitude > 4:
+      case depth > 70:
         return "orangered";
-      case magnitude > 3:
+      case depth > 50:
         return "orange";
-      case magnitude > 2:
+      case depth > 30:
         return "gold";
-      case magnitude > 1:
+      case depth > 10:
         return "yellow";
       default:
         return "lightgreen";
@@ -100,7 +100,7 @@ d3.json(earthquakesURL, function(earthquakeData) {
         // Set the style of the markers based on properties.mag
         {
           radius: markerSize(feature.properties.mag),
-          fillColor: chooseColor(feature.properties.mag),
+          fillColor: chooseColor(feature.geometry.coordinates[2]),
           fillOpacity: 0.7,
           color: "black",
           stroke: true,
@@ -129,14 +129,14 @@ d3.json(earthquakesURL, function(earthquakeData) {
     var legend = L.control({position: "bottomright"});
     legend.onAdd = function() {
       var div = L.DomUtil.create("div", "info legend"),
-      mag = [0, 1, 2, 3, 4, 5];
+      depth = [-10, 10, 30, 50, 70, 90];
       
       div.innerHTML += "<h3>Magnitude</h3>"
   
-      for (var i =0; i < mag.length; i++) {
+      for (var i =0; i < depth.length; i++) {
         div.innerHTML += 
-        '<i style="background:' + chooseColor(mag[i] + 1) + '"></i> ' +
-            mag[i] + (mag[i + 1] ? '&ndash;' + mag[i + 1] + '<br>' : '+');
+        '<i style="background:' + chooseColor(depth[i] + 1) + '"></i> ' +
+            depth[i] + (depth[i + 1] ? '&ndash;' + depth[i + 1] + '<br>' : '+');
         }
         return div;
       };
